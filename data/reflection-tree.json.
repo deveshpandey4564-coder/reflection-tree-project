@@ -1,0 +1,439 @@
+{
+  "meta": {
+    "version": "1.0",
+    "axes": ["locus", "orientation", "radius"],
+    "totalNodes": 37
+  },
+  "nodes": [
+
+    {
+      "id": "START",
+      "parentId": null,
+      "type": "start",
+      "text": "Today happened. Before you close the chapter on it — 5 minutes to understand it better.",
+      "options": null,
+      "target": "A1_Q1",
+      "signal": null
+    },
+
+    {
+      "id": "A1_BRIDGE_IN",
+      "parentId": "START",
+      "type": "bridge",
+      "text": "Let's start with what happened — and who you felt was driving.",
+      "options": null,
+      "target": "A1_Q1",
+      "signal": null
+    },
+
+    {
+      "id": "A1_Q1",
+      "parentId": "A1_BRIDGE_IN",
+      "type": "question",
+      "text": "When something went wrong at work today, what was your first thought?",
+      "options": [
+        { "label": "A", "text": "Who or what caused this?",                        "signal": "EXT-3" },
+        { "label": "B", "text": "Why did this happen?",                             "signal": "EXT-1" },
+        { "label": "C", "text": "What could I have done differently?",              "signal": "INT-1" },
+        { "label": "D", "text": "What's my next move?",                             "signal": "INT-3" }
+      ],
+      "target": "A1_D1",
+      "signal": null
+    },
+
+    {
+      "id": "A1_D1",
+      "parentId": "A1_Q1",
+      "type": "decision",
+      "text": "Route based on A1_Q1 answer",
+      "options": null,
+      "rules": [
+        { "if": ["A", "B"], "target": "A1_Q2" },
+        { "if": ["C", "D"], "target": "A1_Q3" }
+      ],
+      "signal": null
+    },
+
+    {
+      "id": "A1_Q2",
+      "parentId": "A1_D1",
+      "type": "question",
+      "text": "When you picture that moment again — who was most 'in charge' of how it played out?",
+      "options": [
+        { "label": "A", "text": "Someone else — it was clearly their fault",        "signal": "EXT-3" },
+        { "label": "B", "text": "The situation itself — timing, system, bad luck",  "signal": "EXT-2" },
+        { "label": "C", "text": "A mix — I played a part, but so did circumstances","signal": "MID"   },
+        { "label": "D", "text": "Mostly me — I can trace it back to a choice I made","signal": "INT-2" }
+      ],
+      "target": "A1_Q3",
+      "signal": null
+    },
+
+    {
+      "id": "A1_Q3",
+      "parentId": "A1_Q2",
+      "type": "question",
+      "text": "After the setback, what did you do first?",
+      "options": [
+        { "label": "A", "text": "Vented to a colleague or sat with the frustration","signal": "EXT-2" },
+        { "label": "B", "text": "Waited to see what others would do next",          "signal": "EXT-1" },
+        { "label": "C", "text": "Started figuring out how to limit the damage",     "signal": "INT-1" },
+        { "label": "D", "text": "Made a decision and acted on it immediately",      "signal": "INT-3" }
+      ],
+      "target": "A1_Q4",
+      "signal": null
+    },
+
+    {
+      "id": "A1_Q4",
+      "parentId": "A1_Q3",
+      "type": "question",
+      "text": "How often do you feel like today's setback was the kind of thing that 'just happens to you'?",
+      "options": [
+        { "label": "A", "text": "Almost every week — it's relentless",             "signal": "EXT-3" },
+        { "label": "B", "text": "Fairly often — more than I'd like",               "signal": "EXT-2" },
+        { "label": "C", "text": "Occasionally — but today felt different",         "signal": "MID"   },
+        { "label": "D", "text": "Rarely — today was genuinely unusual",            "signal": "INT-2" }
+      ],
+      "target": "A1_Q5",
+      "signal": null
+    },
+
+    {
+      "id": "A1_Q5",
+      "parentId": "A1_Q4",
+      "type": "question",
+      "text": "Right now, finishing this day, what feels most true?",
+      "options": [
+        { "label": "A", "text": "I was dealt a bad hand today — I did what I could","signal": "EXT",   "target": "A1_R_REFRAME"       },
+        { "label": "B", "text": "Things got away from me, but I see where I lost the thread","signal": "MID","target": "A1_R_AWARENESS" },
+        { "label": "C", "text": "I had more control than I used — I let it slip",  "signal": "INT",   "target": "A1_R_ACCOUNTABILITY" },
+        { "label": "D", "text": "I owned it. I'm already thinking about tomorrow", "signal": "INT-3", "target": "A1_R_MOMENTUM"       }
+      ],
+      "target": null,
+      "signal": null
+    },
+
+    {
+      "id": "A1_R_REFRAME",
+      "parentId": "A1_Q5",
+      "type": "reflection",
+      "text": "External forces are real. The question isn't who caused it — it's what you do with what's left.",
+      "options": null,
+      "target": "A1_A2_BRIDGE",
+      "signal": "EXT"
+    },
+    {
+      "id": "A1_R_AWARENESS",
+      "parentId": "A1_Q5",
+      "type": "reflection",
+      "text": "You can already see the gap between where you were and where you wanted to be. That gap is the work.",
+      "options": null,
+      "target": "A1_A2_BRIDGE",
+      "signal": "MID"
+    },
+    {
+      "id": "A1_R_ACCOUNTABILITY",
+      "parentId": "A1_Q5",
+      "type": "reflection",
+      "text": "You knew. You saw the lever. Tomorrow, pull it earlier.",
+      "options": null,
+      "target": "A1_A2_BRIDGE",
+      "signal": "INT"
+    },
+    {
+      "id": "A1_R_MOMENTUM",
+      "parentId": "A1_Q5",
+      "type": "reflection",
+      "text": "This is the mindset. Protect it. Name one thing you'll carry into tomorrow.",
+      "options": null,
+      "target": "A1_A2_BRIDGE",
+      "signal": "INT-3"
+    },
+
+    {
+      "id": "A1_A2_BRIDGE",
+      "parentId": null,
+      "type": "bridge",
+      "text": "Now that you know where you stood today — let's look at what you chose to put in.",
+      "options": null,
+      "target": "A2_Q1",
+      "signal": null
+    },
+
+    {
+      "id": "A2_Q1",
+      "parentId": "A1_A2_BRIDGE",
+      "type": "question",
+      "text": "At some point today, did you feel like you weren't getting what you deserved at work?",
+      "options": [
+        { "label": "A", "text": "Yes — and it frustrated me for most of the day",                          "signal": "ENT-3" },
+        { "label": "B", "text": "Briefly — but I shook it off",                                            "signal": "ENT-1" },
+        { "label": "C", "text": "Not really — today felt pretty fair",                                     "signal": "CON-1" },
+        { "label": "D", "text": "I wasn't thinking about what I was getting — I was focused on what I was doing","signal": "CON-3" }
+      ],
+      "target": "A2_Q2",
+      "signal": null
+    },
+
+    {
+      "id": "A2_Q2",
+      "parentId": "A2_Q1",
+      "type": "question",
+      "text": "When you picture a moment today where you felt undervalued — what was the source?",
+      "options": [
+        { "label": "A", "text": "I've put in years here — it should count for more",         "signal": "ENT-3" },
+        { "label": "B", "text": "I'm at a certain level — some things shouldn't land on my desk","signal": "ENT-2" },
+        { "label": "C", "text": "I did specific work today that didn't get acknowledged",    "signal": "MID"   },
+        { "label": "D", "text": "I didn't feel overlooked — or moved past it quickly",       "signal": "CON-2" }
+      ],
+      "target": "A2_Q3",
+      "signal": null
+    },
+
+    {
+      "id": "A2_Q3",
+      "parentId": "A2_Q2",
+      "type": "question",
+      "text": "When a task came up today that felt 'beneath you' — what did you do?",
+      "options": [
+        { "label": "A", "text": "Ignored it or passed it on without much thought",          "signal": "ENT-3" },
+        { "label": "B", "text": "Did it, but made it known I wasn't happy about it",        "signal": "ENT-2" },
+        { "label": "C", "text": "Did it quietly — even if it wasn't what I wanted",         "signal": "CON-1" },
+        { "label": "D", "text": "Did it and didn't think twice — the team needed it done",  "signal": "CON-3" }
+      ],
+      "target": "A2_Q4",
+      "signal": null
+    },
+
+    {
+      "id": "A2_Q4",
+      "parentId": "A2_Q3",
+      "type": "question",
+      "text": "How much of your day was spent tracking what you gave versus what you got back?",
+      "options": [
+        { "label": "A", "text": "A lot — I'm very aware of whether things are balanced",   "signal": "ENT-3" },
+        { "label": "B", "text": "Some — I notice when the ratio feels off",                 "signal": "ENT-1" },
+        { "label": "C", "text": "Barely — I trust it evens out over time",                  "signal": "CON-1" },
+        { "label": "D", "text": "Not at all — I don't run that calculation",                "signal": "CON-3" }
+      ],
+      "target": "A2_Q5",
+      "signal": null
+    },
+
+    {
+      "id": "A2_Q5",
+      "parentId": "A2_Q4",
+      "type": "question",
+      "text": "Finishing today — which of these feels most honest?",
+      "options": [
+        { "label": "A", "text": "I gave a lot today and it went largely unnoticed",                       "signal": "ENT",  "target": "A2_R_RECOGNITION" },
+        { "label": "B", "text": "I caught myself waiting to be rewarded before I fully committed",        "signal": "MID",  "target": "A2_R_AUDIT"       },
+        { "label": "C", "text": "I contributed without keeping score — and it felt right",               "signal": "CON",  "target": "A2_R_ALIGNMENT"   },
+        { "label": "D", "text": "I was so focused on the work, the question barely applies",             "signal": "CON-3","target": "A2_R_FLOW"        }
+      ],
+      "target": null,
+      "signal": null
+    },
+
+    {
+      "id": "A2_R_RECOGNITION",
+      "parentId": "A2_Q5",
+      "type": "reflection",
+      "text": "Contribution without acknowledgement is real and draining. Are you waiting for permission to feel good about what you did?",
+      "options": null,
+      "target": "A2_A3_BRIDGE",
+      "signal": "ENT"
+    },
+    {
+      "id": "A2_R_AUDIT",
+      "parentId": "A2_Q5",
+      "type": "reflection",
+      "text": "If you're waiting to see what you get before deciding how much to give — who's in control of your day?",
+      "options": null,
+      "target": "A2_A3_BRIDGE",
+      "signal": "MID"
+    },
+    {
+      "id": "A2_R_ALIGNMENT",
+      "parentId": "A2_Q5",
+      "type": "reflection",
+      "text": "You gave without a running tab. That's not naivety — it's the mindset that compounds. What made it easy today?",
+      "options": null,
+      "target": "A2_A3_BRIDGE",
+      "signal": "CON"
+    },
+    {
+      "id": "A2_R_FLOW",
+      "parentId": "A2_Q5",
+      "type": "reflection",
+      "text": "When the work is the point, the scoreboard disappears. Name what you were building toward.",
+      "options": null,
+      "target": "A2_A3_BRIDGE",
+      "signal": "CON-3"
+    },
+
+    {
+      "id": "A2_A3_BRIDGE",
+      "parentId": null,
+      "type": "bridge",
+      "text": "You've looked inward — at your control, at your effort. Now look outward.",
+      "options": null,
+      "target": "A3_Q1",
+      "signal": null
+    },
+
+    {
+      "id": "A3_Q1",
+      "parentId": "A2_A3_BRIDGE",
+      "type": "question",
+      "text": "Today, when you had a win or a useful insight — what did you do with it?",
+      "options": [
+        { "label": "A", "text": "Kept it close — it's part of what makes me useful",               "signal": "SELF-3" },
+        { "label": "B", "text": "Mentioned it if it came up naturally",                             "signal": "SELF-1" },
+        { "label": "C", "text": "Shared it when I thought it would help someone",                   "signal": "OTH-1"  },
+        { "label": "D", "text": "Actively passed it on — someone needed it more than I did",       "signal": "OTH-3"  }
+      ],
+      "target": "A3_Q2",
+      "signal": null
+    },
+
+    {
+      "id": "A3_Q2",
+      "parentId": "A3_Q1",
+      "type": "question",
+      "text": "When a colleague was visibly struggling today — what was your internal response?",
+      "options": [
+        { "label": "A", "text": "Noticed, but stayed focused on my own work",                      "signal": "SELF-3" },
+        { "label": "B", "text": "Felt a pull to help but didn't act on it",                        "signal": "SELF-1" },
+        { "label": "C", "text": "Checked in briefly or offered a small hand",                      "signal": "OTH-1"  },
+        { "label": "D", "text": "Stopped what I was doing — their block was worth solving",        "signal": "OTH-3"  }
+      ],
+      "target": "A3_Q3",
+      "signal": null
+    },
+
+    {
+      "id": "A3_Q3",
+      "parentId": "A3_Q2",
+      "type": "question",
+      "text": "Did you do anything today that helped the team but cost you something — time, credit, or energy?",
+      "options": [
+        { "label": "A", "text": "No — I had enough on my plate",                                   "signal": "SELF-3" },
+        { "label": "B", "text": "Barely — nothing significant",                                    "signal": "SELF-1" },
+        { "label": "C", "text": "Yes, one small thing",                                            "signal": "OTH-1"  },
+        { "label": "D", "text": "Yes — and it was a deliberate choice",                            "signal": "OTH-3"  }
+      ],
+      "target": "A3_Q4",
+      "signal": null
+    },
+
+    {
+      "id": "A3_Q4",
+      "parentId": "A3_Q3",
+      "type": "question",
+      "text": "When credit was given today — how did it land?",
+      "options": [
+        { "label": "A", "text": "I track it — I want what I contributed acknowledged",             "signal": "SELF-3" },
+        { "label": "B", "text": "I noticed if my name was missing",                                "signal": "SELF-1" },
+        { "label": "C", "text": "Fine as long as the work got recognised somewhere",               "signal": "OTH-1"  },
+        { "label": "D", "text": "Didn't cross my mind — the outcome mattered more than the credit","signal": "OTH-3"  }
+      ],
+      "target": "A3_Q5",
+      "signal": null
+    },
+
+    {
+      "id": "A3_Q5",
+      "parentId": "A3_Q4",
+      "type": "question",
+      "text": "Honest finish: whose success were you most invested in today?",
+      "options": [
+        { "label": "A", "text": "Mine — and that's not something I'm ashamed of",                 "signal": "SELF",  "target": "A3_R_SELFAWARE"  },
+        { "label": "B", "text": "Mine mostly, but I caught myself a few times",                   "signal": "MID",   "target": "A3_R_EXPAND"     },
+        { "label": "C", "text": "It shifted — I found myself caring about the team's outcome",    "signal": "OTH",   "target": "A3_R_RIPPLE"     },
+        { "label": "D", "text": "The work itself — individual wins felt beside the point",        "signal": "OTH-3", "target": "A3_R_TRANSCEND"  }
+      ],
+      "target": null,
+      "signal": null
+    },
+
+    {
+      "id": "A3_R_SELFAWARE",
+      "parentId": "A3_Q5",
+      "type": "reflection",
+      "text": "Self-focus isn't a flaw — it's a signal. What would it cost you to let one person benefit from what you know?",
+      "options": null,
+      "target": "SUMMARY",
+      "signal": "SELF"
+    },
+    {
+      "id": "A3_R_EXPAND",
+      "parentId": "A3_Q5",
+      "type": "reflection",
+      "text": "You noticed the pull toward others and didn't fully act. What stopped you — and is that reason still worth keeping?",
+      "options": null,
+      "target": "SUMMARY",
+      "signal": "MID"
+    },
+    {
+      "id": "A3_R_RIPPLE",
+      "parentId": "A3_Q5",
+      "type": "reflection",
+      "text": "You felt the team's outcome as your own. That's not softness — it's leverage. What did you do today that someone will build on tomorrow?",
+      "options": null,
+      "target": "SUMMARY",
+      "signal": "OTH"
+    },
+    {
+      "id": "A3_R_TRANSCEND",
+      "parentId": "A3_Q5",
+      "type": "reflection",
+      "text": "The work was bigger than the scoreboard. Name what you were part of — and whether today's version of you is who you want to show up as tomorrow.",
+      "options": null,
+      "target": "SUMMARY",
+      "signal": "OTH-3"
+    },
+
+    {
+      "id": "SUMMARY",
+      "parentId": null,
+      "type": "summary",
+      "text": "Today you were a {A1_signal} who {A2_signal} and kept your focus {A3_signal}.",
+      "interpolation": {
+        "A1_signal": {
+          "EXT":   "Victim",
+          "MID":   "somewhere between",
+          "INT":   "Victor",
+          "INT-3": "clear-eyed Victor"
+        },
+        "A2_signal": {
+          "ENT":   "expected more than they gave",
+          "MID":   "noticed the pull of entitlement",
+          "CON":   "contributed without keeping score",
+          "CON-3": "was fully in the work"
+        },
+        "A3_signal": {
+          "SELF":   "mostly on yourself",
+          "MID":    "shifting between self and others",
+          "OTH":    "on the people around you",
+          "OTH-3":  "beyond individual wins"
+        }
+      },
+      "options": null,
+      "target": "END",
+      "signal": null
+    },
+
+    {
+      "id": "END",
+      "parentId": "SUMMARY",
+      "type": "end",
+      "text": "Same time tomorrow.",
+      "options": null,
+      "target": null,
+      "signal": null
+    }
+
+  ]
+}
