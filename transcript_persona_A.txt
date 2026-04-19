@@ -1,0 +1,46 @@
+[START] Today happened. Before you close the chapter on it — 5 minutes to understand it better.
+[QUESTION] When something went wrong at work today, what was your first thought?
+  → Answer: What could I have done differently? (signal: INT-1)
+[DECISION] Route based on A1_Q1 answer
+[QUESTION] When you picture that moment again — who was most 'in charge' of how it played out?
+  → Answer: The situation itself — timing, system, bad luck (signal: EXT-2)
+[QUESTION] After the setback, what did you do first?
+  → Answer: Started figuring out how to limit the damage (signal: INT-1)
+[QUESTION] How often do you feel like today's setback was the kind of thing that 'just happens to you'?
+  → Answer: Rarely — today was genuinely unusual (signal: INT-2)
+[QUESTION] Right now, finishing this day, what feels most true?
+  → Answer: I had more control than I used — I let it slip (signal: INT)
+[REFLECTION] You knew. You saw the lever. Tomorrow, pull it earlier.
+[BRIDGE] Now that you know where you stood today — let's look at what you chose to put in.
+[QUESTION] At some point today, did you feel like you weren't getting what you deserved at work?
+  → Answer: I wasn't thinking about what I was getting — I was focused on what I was doing (signal: CON-3)
+[QUESTION] When you picture a moment today where you felt undervalued — what was the source?
+  → Answer: I did specific work today that didn't get acknowledged (signal: MID)
+[QUESTION] When a task came up today that felt 'beneath you' — what did you do?
+  → Answer: Did it, but made it known I wasn't happy about it (signal: ENT-2)
+[QUESTION] How much of your day was spent tracking what you gave versus what you got back?
+  → Answer: Barely — I trust it evens out over time (signal: CON-1)
+[QUESTION] Finishing today — which of these feels most honest?
+  → Answer: I gave a lot today and it went largely unnoticed (signal: ENT)
+[REFLECTION] Contribution without acknowledgement is real and draining. Are you waiting for permission to feel good about what you did?
+[BRIDGE] You've looked inward — at your control, at your effort. Now look outward.
+[QUESTION] Today, when you had a win or a useful insight — what did you do with it?
+  → Answer: Mentioned it if it came up naturally (signal: SELF-1)
+[QUESTION] When a colleague was visibly struggling today — what was your internal response?
+  → Answer: Checked in briefly or offered a small hand (signal: OTH-1)
+[QUESTION] Did you do anything today that helped the team but cost you something — time, credit, or energy?
+  → Answer: No — I had enough on my plate (signal: SELF-3)
+[QUESTION] When credit was given today — how did it land?
+  → Answer: Fine as long as the work got recognised somewhere (signal: OTH-1)
+[QUESTION] Honest finish: whose success were you most invested in today?
+  → Answer: Mine mostly, but I caught myself a few times (signal: MID)
+[REFLECTION] You noticed the pull toward others and didn't fully act. What stopped you — and is that reason still worth keeping?
+[SUMMARY] Today you were a {A1_signal} who {A2_signal} and kept your focus {A3_signal}.
+
+SUMMARY: Today you were a Victor who expected more than they gave and kept your focus shifting between self and others.
+[END] Same time tomorrow.
+
+Signals recorded:
+  A1: ['INT-1', 'EXT-2', 'INT-1', 'INT-2', 'INT', 'INT']
+  A2: ['CON-3', 'MID', 'ENT-2', 'CON-1', 'ENT', 'ENT']
+  A3: ['SELF-1', 'OTH-1', 'SELF-3', 'OTH-1', 'MID', 'MID']

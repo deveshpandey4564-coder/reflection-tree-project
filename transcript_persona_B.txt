@@ -1,0 +1,46 @@
+[START] Today happened. Before you close the chapter on it — 5 minutes to understand it better.
+[QUESTION] When something went wrong at work today, what was your first thought?
+  → Answer: Why did this happen? (signal: EXT-1)
+[DECISION] Route based on A1_Q1 answer
+[QUESTION] When you picture that moment again — who was most 'in charge' of how it played out?
+  → Answer: A mix — I played a part, but so did circumstances (signal: MID)
+[QUESTION] After the setback, what did you do first?
+  → Answer: Made a decision and acted on it immediately (signal: INT-3)
+[QUESTION] How often do you feel like today's setback was the kind of thing that 'just happens to you'?
+  → Answer: Almost every week — it's relentless (signal: EXT-3)
+[QUESTION] Right now, finishing this day, what feels most true?
+  → Answer: Things got away from me, but I see where I lost the thread (signal: MID)
+[REFLECTION] You can already see the gap between where you were and where you wanted to be. That gap is the work.
+[BRIDGE] Now that you know where you stood today — let's look at what you chose to put in.
+[QUESTION] At some point today, did you feel like you weren't getting what you deserved at work?
+  → Answer: Not really — today felt pretty fair (signal: CON-1)
+[QUESTION] When you picture a moment today where you felt undervalued — what was the source?
+  → Answer: I'm at a certain level — some things shouldn't land on my desk (signal: ENT-2)
+[QUESTION] When a task came up today that felt 'beneath you' — what did you do?
+  → Answer: Ignored it or passed it on without much thought (signal: ENT-3)
+[QUESTION] How much of your day was spent tracking what you gave versus what you got back?
+  → Answer: Not at all — I don't run that calculation (signal: CON-3)
+[QUESTION] Finishing today — which of these feels most honest?
+  → Answer: I caught myself waiting to be rewarded before I fully committed (signal: MID)
+[REFLECTION] If you're waiting to see what you get before deciding how much to give — who's in control of your day?
+[BRIDGE] You've looked inward — at your control, at your effort. Now look outward.
+[QUESTION] Today, when you had a win or a useful insight — what did you do with it?
+  → Answer: Mentioned it if it came up naturally (signal: SELF-1)
+[QUESTION] When a colleague was visibly struggling today — what was your internal response?
+  → Answer: Checked in briefly or offered a small hand (signal: OTH-1)
+[QUESTION] Did you do anything today that helped the team but cost you something — time, credit, or energy?
+  → Answer: Barely — nothing significant (signal: SELF-1)
+[QUESTION] When credit was given today — how did it land?
+  → Answer: I track it — I want what I contributed acknowledged (signal: SELF-3)
+[QUESTION] Honest finish: whose success were you most invested in today?
+  → Answer: The work itself — individual wins felt beside the point (signal: OTH-3)
+[REFLECTION] The work was bigger than the scoreboard. Name what you were part of — and whether today's version of you is who you want to show up as tomorrow.
+[SUMMARY] Today you were a {A1_signal} who {A2_signal} and kept your focus {A3_signal}.
+
+SUMMARY: Today you were a somewhere between who noticed the pull of entitlement and kept your focus beyond individual wins.
+[END] Same time tomorrow.
+
+Signals recorded:
+  A1: ['EXT-1', 'MID', 'INT-3', 'EXT-3', 'MID', 'MID']
+  A2: ['CON-1', 'ENT-2', 'ENT-3', 'CON-3', 'MID', 'MID']
+  A3: ['SELF-1', 'OTH-1', 'SELF-1', 'SELF-3', 'OTH-3', 'OTH-3']
